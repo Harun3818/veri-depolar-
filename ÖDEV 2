@@ -66,3 +66,50 @@ WHERE Mno IN (
     )
 );
 
+
+5-
+SELECT A.Model, A.Marka, A.Fiyat, S.Sfiyat
+FROM Araç A
+JOIN Satış S ON A.Aracno = S.Aracno
+WHERE A.Fiyat > 20000;
+
+6-
+SELECT M.Mno, M.Madi, M.Soyadi, M.Madres, M.Mtelefon
+FROM Müşteri M
+LEFT JOIN Satış S ON M.Mno = S.Mno
+LEFT JOIN Alım A ON M.Mno = A.Mno
+WHERE S.Mno IS NULL AND A.Mno IS NULL;
+
+7-
+SELECT M.Mno, M.Madi, M.Soyadi, M.Madres, M.Mtelefon
+FROM Müşteri M
+LEFT JOIN Satış S ON M.Mno = S.Mno
+LEFT JOIN Alım A ON M.Mno = A.Mno
+WHERE S.Mno IS NULL AND A.Mno IS NULL;
+
+8-
+SELECT DISTINCT M.Madi, M.Soyadi
+FROM Müşteri M
+JOIN Satış S ON M.Mno = S.Mno
+WHERE MONTH(S.Sat_tarih) IN (5, 6);
+
+9-
+SELECT M.Madi, M.Soyadi, A.Marka
+FROM Müşteri M
+JOIN Alım Al ON M.Mno = Al.Mno
+JOIN Araç A ON Al.Aracno = A.Aracno
+WHERE A.Marka IN (
+    SELECT A.Marka
+    FROM Araç A
+    JOIN Alım Al ON A.Aracno = Al.Aracno
+    GROUP BY A.Marka
+    HAVING COUNT(*) > 1
+);
+
+10-
+SELECT A.Marka, A.Fiyat, M.Madi, M.Soyadi
+FROM Araç A
+JOIN Satış S ON A.Aracno = S.Aracno
+JOIN Müşteri M ON S.Mno = M.Mno
+WHERE S.Sfiyat = (SELECT MAX(Sfiyat) FROM Satış);
+
