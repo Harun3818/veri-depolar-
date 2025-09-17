@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+namespace deneme_2 { public partial class Form1 : Form { public Form1() { InitializeComponent(); 
+        } public string conString = "Data Source=LAB3-00;Initial Catalog=Harun;Integrated Security=True;TrustServerCertificate=True";
+        private void label1_Click(object sender, EventArgs e) { } private void Form1_Load(object sender, EventArgs e) { } 
+        private void button1_Click(object sender, EventArgs e) { SqlConnection bağlanti = new SqlConnection(conString);
+            bağlanti.Open();
+            if (bağlanti.State == System.Data.ConnectionState.Open) { string query = "insert into denemek values ('" + txtAd.Text + "','" + txtTelefon.Text + "')"; 
+                SqlCommand komut = new SqlCommand(query, bağlanti);
+                komut.ExecuteNonQuery();
+                MessageBox.Show("Eklendi"); } } } }
