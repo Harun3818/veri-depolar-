@@ -16,4 +16,12 @@ namespace deneme_2 { public partial class Form1 : Form { public Form1() { Initia
             if (bağlanti.State == System.Data.ConnectionState.Open) { string query = "insert into denemek values ('" + txtAd.Text + "','" + txtTelefon.Text + "')"; 
                 SqlCommand komut = new SqlCommand(query, bağlanti);
                 komut.ExecuteNonQuery();
-                MessageBox.Show("Eklendi"); } } } }
+                MessageBox.Show("Eklendi"); } } } 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+internal = erişim belirleyici 
+ekrana yazı yadırmak için consele 
+bir  yapının metot olduğunu anlamak için  sol tarıfında eğer mor renkte küp varsa metotdur
+console.read(); = konsol açıldığında ben enter a basana kadar açık kalır
+write yazının sağına atar        writeline yazıdan sonra imlecialt satıra atar
+string = alfbetik türde verilerimizi tutabilmek için yapı
