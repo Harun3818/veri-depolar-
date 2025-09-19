@@ -28,5 +28,11 @@ write yazının sağına atar        writeline yazıdan sonra imlecialt satıra 
 string yapısı 
 string = alfbetik türde verilerimizi tutabilmek için yapı
 int = tam sayı
+double =ondalık kısım 
+parse ; dönüştüme metodu
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
