@@ -24,4 +24,9 @@ ekrana yazı yadırmak için consele
 bir  yapının metot olduğunu anlamak için  sol tarıfında eğer mor renkte küp varsa metotdur
 console.read(); = konsol açıldığında ben enter a basana kadar açık kalır
 write yazının sağına atar        writeline yazıdan sonra imlecialt satıra atar
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+string yapısı 
 string = alfbetik türde verilerimizi tutabilmek için yapı
+int = tam sayı
+
+
