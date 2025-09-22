@@ -46,6 +46,8 @@ postolcode nvarchar (100),
 addresstext nvarchar (100),
 users_ID int foreign key (users_ID) references users(users_ID),
 city_ID int foreign key (city_ID) references Cities(city_ID),
+countries_ID int  foreign key (countries_ID) references Countries(countries_ID),
+Towns_ID int  foreign key (Towns_ID) references Towns(Towns_ID),
 district_ID int foreign key (district_ID) references district(district_ID)
 ); 
 
