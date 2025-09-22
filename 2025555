@@ -1,0 +1,112 @@
+
+
+create table users(
+users_ID int identity(1,1) not null primary key,
+username  nvarchar (100),
+surname nvarchar(100),
+email nvarchar (100),
+password_ nvarchar (100),
+gender nvarchar (100),
+birthdate nvarchar (100),
+createdate nvarchar (100),
+telnr1 nvarchar (100),
+telnr2 nvarchar (100),
+
+);
+
+create table Orders (
+order_ID int identity(1,1) not null primary key,
+Date_ nvarchar (100),
+totalprice nvarchar (100),
+status_ nvarchar (100),
+users_ID int foreign key (users_ID) references users(users_ID),
+address_id int foreign key (address_ID) references Addres(address_ID)
+);
+
+create table Addres (
+address_ID int identity(1,1) not null primary key,
+postolcode nvarchar (100),
+addresstext nvarchar (100),
+users_ID int foreign key (users_ID) references users(users_ID),
+City_ID int foreign key (city_ID) references Cities(city_ID),
+Dıstrıcts_ID int foreign key (address_ID) references address_(address_ID),
+address_id int foreign key (address_ID) references address_(address_ID)
+);
+
+create table items(
+item_ID int identity(1,1) not null primary key,
+itemcode  nvarchar (100),
+itemname nvarchar(100),
+unitPrice nvarchar (100),
+cateGory1 nvarchar (100),
+cateGory2 nvarchar (100),
+cateGory3 nvarchar (100),
+cateGory4 nvarchar (100),
+brand nvarchar (100),
+);
+
+create table OrderDetaıls (
+OrderDetaıls_ID int identity(1,1) not null primary key,
+amouut nvarchar (100),
+unitprice nvarchar (100),
+lineTotal nvarchar (100),
+item_ID int foreign key (item_ID) references items(item_ID),
+order_ID int  foreign key (order_ID) references Orders(order_ID)
+);
+
+create table Cities (
+city int identity(1,1) not null primary key,
+town nvarchar (100),
+countries_ID int  foreign key (countries_ID) references Countries(countries_ID)
+);
+
+create table Towns (
+town_ID int identity(1,1) not null primary key,
+town nvarchar (100),
+City_ID int foreign key (city_ID) references Cities(city_ID),
+order_ID int  foreign key (order_ID) references Orders(order_ID)
+);
+
+create table Countries (
+countries_ID int identity(1,1) not null primary key,
+country nvarchar (100)
+);
+ 
+create table district(
+district_ID int identity(1,1) not null primary key,
+district nvarchar (100),
+town_ID int  foreign key (town_ID) references Towns(town_ID)
+
+);
+
+create table Payments(
+Payments_ID int identity(1,1) not null primary key,
+Paymenttype nvarchar (100),
+date_ nvarchar (100),
+Isok nvarchar (100),
+Approvecode nvarchar (100),
+PaymentTotal nvarchar (100),
+order_ID int  foreign key (order_ID) references Orders(order_ID)
+
+);
+
+create table ın
+Payments_ID int identity(1,1) not null primary key,
+Paymenttype nvarchar (100),
+date_ nvarchar (100),
+Isok nvarchar (100),
+Approvecode nvarchar (100),
+PaymentTotal nvarchar (100),
+order_ID int  foreign key (order_ID) references Orders(order_ID)
+
+);
+
+
+
+
+
+
+
+
+
+
