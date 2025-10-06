@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+
+
+   <div> 
+<table>
+<tr>
+    <th>İsim</th>
+    <th>soyad</th>
+    <th>email</th>
+</tr>
+
+<tr class="tablo">
+    <td>harun</td>
+    <td>kara</td>
+    <td>hagmail.com</td>
+
+</tr >
+<tr class="tabloiki">
+    <td>harun</td>
+    <td>kara</td>
+    <td>hagmail.com</td>
+
+</tr>
+
+<tr class="tabloüç">
+    <td>harun</td>
+    <td>kara</td>
+    <td>hagmail.com</td>
+
+</tr>
+<tr class="tablodört">
+    <td>harun</td>
+    <td>kara</td>
+    <td>hagmail.com</td>
+
+</tr>
+</table>
+    </div>
+<div class="giriş">
+    <form >
+        <h1>Hoşgeldin</h1>
+        <h3>ad</h3><input type="text" name="isim">
+        <h3>soyad</h3><input type="text" name="isim">
+        <h3>şifre</h3><input type="password" name="isim">
+        <h3>eposta</h3><input type="email" name="isim">
+        <input type="submit">
+        <input type="reset">
+
+    </form>
+    </div>
+</body>
+</html>
+
+
+--------------------------------
+
+
+
+table {
+    
+    height: 100px;
+    width: 500px;
+
+}
+
+
+
+table td,th {
+    border: 1px solid;
+    
+}
+table{
+   border-collapse: collapse;
+}
+
+td {
+    font-size: 20px;
+    text-align: center;
+}
+th{
+    background: blanchedalmond;
+}
+
+.tabloiki{
+    background-color: aqua;
+}
+tr:hover{
+    background: gray;
+    height: 50px;
+
+
+}
+th:hover{
+    font-size: 100px;
+}
+
+input{
+    width: 500px;
+    height: 25px;
+    display: block;
+    margin-bottom: 10px;
+     border-bottom: red dotted 5px;
+    
+    
+}
+form{
+    
+   padding: 50px;
+   margin: 60px;
+    display:inline-block;
+    align-items: center;
+    justify-content: center;
+  
+  border: 1px solid;
+  padding: 100px;
+  z-index: 1;
+  
+
+}
+input[type=text]:focus{
+    background: gray;
+   
+    outline: none;
+    
+    
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    font-size: 100px;
+}
+
