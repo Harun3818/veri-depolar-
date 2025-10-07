@@ -32,7 +32,45 @@ double =ondalık kısım
 parse ; dönüştüme metodu
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+int result;
 
+char sembol;
+
+Console.WriteLine("1.sayı gir");
+int sayi1=int.Parse(Console.ReadLine());
+
+Console.WriteLine("2.sayı gir");
+int sayi2 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("sembol giriniz  ");
+sembol=char.Parse(Console.ReadLine());
+
+//HESAP makinesi
+switch (sembol)
+{   
+    case '+':
+        result= sayi1 + sayi2;
+        Console.WriteLine("toplamı :"+ result);
+        break;
+
+    case '-':
+
+        result = sayi1 + sayi2;
+        Console.WriteLine("toplamı :" + result);
+        break;
+    case '/':
+
+        result = sayi1 + sayi2;
+        Console.WriteLine("toplamı :" + result);
+        break;
+
+    case '*':
+        result = sayi1 + sayi2;
+        Console.WriteLine("toplamı :" + result);
+        break;
+
+}
+Console.Read();
 
 
 
