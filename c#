@@ -55,18 +55,18 @@ switch (sembol)
 
     case '-':
 
-        result = sayi1 + sayi2;
-        Console.WriteLine("toplamı :" + result);
+        result = sayi1 - sayi2;
+        Console.WriteLine("çıkartma :" + result);
         break;
     case '/':
 
-        result = sayi1 + sayi2;
-        Console.WriteLine("toplamı :" + result);
+        result = sayi1 / sayi2;
+        Console.WriteLine("bölme :" + result);
         break;
 
     case '*':
-        result = sayi1 + sayi2;
-        Console.WriteLine("toplamı :" + result);
+        result = sayi1 * sayi2;
+        Console.WriteLine("çarpma :" + result);
         break;
 
 }
